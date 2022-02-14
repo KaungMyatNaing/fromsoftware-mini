@@ -1,2 +1,0 @@
-# kaungmyatnaing.github.io
-mine

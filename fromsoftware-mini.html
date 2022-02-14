@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background-color: black;
+        }
+        .container{
+        
+            align-items: center;
+           
+        }
+        .nav-bar{
+            display: flex;
+            flex-direction: row;
+            align-content: space-between;
+           
+            gap: 20%;
+            z-index: 99;
+        }
+        .left{
+            display: flex;
+            flex-direction: row;
+            z-index: 98;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .left h2{
+            cursor: pointer;
+        }
+        .right{
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            z-index: 98;
+            color: white;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            
+        }
+        .right h3{
+            cursor: pointer;
+        }
+        .gala-container{
+            display: flex;
+            flex-direction: row;
+            margin-top: -8%;
+            z-index: -1;
+            
+        }
+        .gala-1{
+            transform: skew(-10deg); /* Equal to skewX(10deg) */
+            width: 30vw;
+            height: 100vh;
+            
+            overflow: hidden;
+            background-image: url("eldenring.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+            transition: 0.5s linear;
+            
+
+        }
+        .gala-2{
+            transform: skew(-10deg); /* Equal to skewX(10deg) */
+            width: 30vw;
+            height: 100vh;
+            
+            overflow: hidden;
+            background-image: url("sekiro.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: right;
+            background-position-y: center;
+            transition: 0.5s linear;
+            
+
+        }
+        .gala-3{
+            transform: skew(-10deg); /* Equal to skewX(10deg) */
+            width: 30vw;
+            height: 100vh;
+            
+            overflow: hidden;
+            background-image: url("ds2.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+            transition: 0.5s linear;
+            
+
+        }
+        .gala-4{
+            transform: skew(-10deg); /* Equal to skewX(10deg) */
+            width: 30vw;
+            height: 100vh;
+            
+            overflow: hidden;
+            background-image: url("armorcore.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+            transition: 0.5s linear;
+            
+
+        }
+        .gala-1:hover{
+            width: 35vw;
+        }
+        .gala-1:hover .title{
+            display: block;
+            animation: opt 1s linear;
+        }
+        .gala-2:hover{
+            width: 35vw;
+        }
+        .gala-2:hover .title{
+            display: block;
+            animation: opt 1s linear;
+        }
+        .gala-3:hover{
+            width: 35vw;
+        }
+        .gala-3:hover .title{
+            display: block;
+            animation: opt 1s linear;
+        }
+        .gala-4:hover{
+            width: 35vw;
+        }
+        .gala-4:hover .title{
+            display: block;
+            animation: opt 1s linear;
+        }
+        .title{
+            display: none;
+            text-align: center;
+           color: white;
+           position: relative;
+           top: 50%;
+            
+
+        }
+        @keyframes opt {
+            0%{
+                opacity: 0;
+            }
+            50%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        .footer{
+            width: 100vw;
+            height: 20vw;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        .footer i{
+            cursor: pointer;
+        }
+       .hidden-model{
+           display: none;
+           width: 100vw;
+           height: 100vh;
+        
+           z-index: 98;
+           color: white;
+           
+       }
+       .model-container{
+           margin-left: 20%;
+       }
+       .cross{
+        position: fixed;
+        top: 40%;
+        right: 3rem;
+        transition: 0.4s linear;
+        cursor: pointer;
+       }
+       .cross:hover{
+           
+       }
+
+       .model-container button{
+            width: 10rem;
+            height: 4rem;
+            border: none;
+            background-color: transparent;
+            color: white;
+            border: 2px white solid;
+            transition: 0.5s linear;
+            cursor: pointer;    
+
+        }
+        .model-container button:hover{
+            
+            color: #444444;
+            background-color: white;
+
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="left">
+                <h2>FROMSOFTWARE</h2>
+            </div>
+            <div class="right">
+                <h3>COMPANY</h3>
+                <h3>PRODUCTS</h3>
+                <h3>PRESS?</h3>
+                <h3>RECURIT</h3>
+                <h3>SUPPORT</h3>
+            </div>
+        </div>
+        <br>
+        <div class="gala-container" id="gala-container">
+            <div class="gala-1" id="gala-1" onclick="ugg()">
+                <h2 class="title">Elden Ring</h2>
+                
+            </div>
+            <div class="gala-2" id="gala-2" onclick="coolmodel(this)">
+                <h2 class="title" >Sekiro</h2>
+            </div>
+            <div class="gala-3" id="gala-3">
+                <h2 class="title">Dark Souls 2</h2>
+            </div>
+            <div class="gala-4" id="gala-4">
+                <h2 class="title">Armor Core</h2>
+            </div>
+           
+        </div>
+
+        <div class="hidden-model" id="hidden-model">
+            <div class="model-container">
+                <span class="cross" onclick="closeme()"><i class="fa fa-window-close fa-4x" aria-hidden="true"></i></span>
+                <h1 id="name"></h1>
+                <p id="desc">
+
+                </p>
+                
+                <button>More Detail</button>
+            </div>
+        </div>
+        <div class="footer">
+            <h3>Follow Us on</h3>
+            <span><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> <i class="fa fa-facebook fa-lg" aria-hidden="true"></i> <i class="fa fa-instagram fa-lg" aria-hidden="true"></i> <i class="fa fa-youtube fa-lg" aria-hidden="true"></i></span>
+            <br>
+            <br>
+            <span>2022 From Soft All Rights Reserved</span>
+        </div>
+    </div>
+</body>
+<script>
+
+var gala1 = document.getElementById("gala-1")
+var gala2 = document.getElementById("gala-2")
+var gala3 = document.getElementById("gala-3")
+var gala4 = document.getElementById("gala-4")
+var mdl = document.getElementById("hidden-model")
+var gala = document.getElementById("gala-container")
+
+var namex  = document.getElementById("name")
+var imgx = document.getElementById("img-cool")
+var desc = document.getElementById("desc")
+function showme(){
+    mdl.style.display = "block"
+    gala.style.display = "none"
+}
+function closeme(){
+    mdl.style.display = "none"
+    gala.style.display = "flex"
+    
+}
+function coolmodel(div){
+    var whatever = document.getElementById(div)
+    switch(whatever){
+        case "gala-1":
+            showme()
+            namex.innerHTML = "Elden Ring"
+            
+        case "gala-2":
+            showme()
+            namex.innerHTML = "Sekiro"
+    }
+}
+function ugg(){
+    console.log("start")
+    showme();
+    
+    namex.innerHTML = "Elden Ring"
+    desc.innerHTML = "THE NEW FANTASY ACTION RPG.Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between."
+    
+    console.log("worked")
+}
+</script>
+</html>
